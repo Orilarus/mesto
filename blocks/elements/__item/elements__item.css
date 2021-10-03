@@ -1,0 +1,15 @@
+.elements__item {
+  margin: 30px 20px 0 0;
+  width: 22px;
+  height: 19px;
+  background: transparent;
+  background-color: black;
+  background-image: url(../../../images/Vector\ \(Stroke\).svg);
+  border: none;
+  cursor: pointer;
+}
+
+.elements__item:hover {
+  opacity: 0.5;
+  transition: 1s;
+}
