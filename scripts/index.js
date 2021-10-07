@@ -1,33 +1,30 @@
 let modalWindow = document.querySelector('.popup');
 let modalWindowCloseBtn = document.querySelector('.popup__close-button');
 let editForm = document.querySelector('.profile__edit-button');
-let userName = document.querySelector('.profile__name')
-let userStatus = document.querySelector('.profile__status')
-let inputName = document.querySelector('#name')
-let inputStatus = document.querySelector('#status')
+let userName = document.querySelector('.profile__name');
+let userStatus = document.querySelector('.profile__status');
+let inputName = document.querySelector('#name');
+let inputStatus = document.querySelector('#status');
+let form = document.querySelector('.popup__form')
 
-function toggleModalWindow() {
-  modalWindow.classList.toggle('popup_opened');
+function popupOpened() {
+  modalWindow.classList.add('popup_opened');
   inputName.value = userName.textContent;
   inputStatus.value = userStatus.textContent;
 }
 
-editForm.addEventListener('click', toggleModalWindow);
-modalWindowCloseBtn.addEventListener('click', toggleModalWindow);
-
-function overlayClick(evt) {
-  if (evt.target === evt.currentTarget) {
-    toggleModalWindow();
-  }
+function popupClosed() {
+  modalWindow.classList.remove('popup_opened');
 }
-
-modalWindow.addEventListener('click', overlayClick);
 
 function formSubmitHandler (evt) {
   evt.preventDefault();
   userName.textContent = inputName.value;
   userStatus.textContent = inputStatus.value;
+  modalWindow.classList.remove('popup_opened');
 }
 
-modalWindow.addEventListener('submit', formSubmitHandler);
+editForm.addEventListener('click', popupOpened);
+modalWindowCloseBtn.addEventListener('click', popupClosed);
+form.addEventListener('submit', formSubmitHandler);
 

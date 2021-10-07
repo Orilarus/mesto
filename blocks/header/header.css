@@ -2,8 +2,7 @@
   margin: 0 auto;
   padding: 0;
   width: calc(100% - 200px * 2);
-  max-height: 119px;
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
 }
 
