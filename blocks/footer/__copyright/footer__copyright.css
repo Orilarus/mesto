@@ -7,7 +7,7 @@
   color: #545454;
 }
 
-@media screen and (min-width: 320px) and (max-width: 1023px) {
+@media screen and (min-width: 320px) and (max-width: 1150px) {
 
   .footer__copyright {
     margin: 0 auto;

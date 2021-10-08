@@ -1,13 +1,14 @@
 .profile__info {
-  margin: 22px 27.73% 25px 3.41%;
+  margin: 22px 0 25px 3.41%;
+  width: 100%;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 24px;
+  grid-template-columns: 294px 24px;
   row-gap: 7px;
   column-gap: 18px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 1023px) {
+@media screen and (min-width: 320px) and (max-width: 1150px) {
 
   .profile__info {
     margin: 0 auto;
